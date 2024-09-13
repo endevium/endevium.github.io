@@ -3,6 +3,17 @@
     src: url(fonts/cloud-lucent-regular.otf);
 }
 
+@font-face {
+    font-family: "Britannic";
+    src: url(fonts/Britannic.ttf);
+}
+
+@font-face {
+    font-family: "Poppins", sans-serif;
+    src: url(fonts/Poppins-Regular.ttf);
+}
+
+
 html {
     scroll-behavior: smooth;
 }
@@ -10,7 +21,7 @@ html {
 .topnav {
     width: 100%;
     height: 70px;
-    margin: 0;
+    margin-left: -8px;
 
     padding: 25px 50px;
     display: flex;
@@ -25,13 +36,14 @@ html {
 }
 
 .topnav a {
-    color: #808080;
+    color: #4b4b4b;
     text-decoration: none;
     margin-bottom: -15px;
     padding: 50px 25px;
     text-align: center;
-    font-family: "Cloud Lucent", sans-serif;
-    font-size: 18px;
+    font-family: "Poppins", sans-serif;
+    font-size: 22px;
+    font-weight: 600;
 }
 
 .topnav a.logo {
@@ -39,6 +51,7 @@ html {
     font-size: 25px;
     font-weight: bold;
     text-align: left;
+    font-family: "Poppins", sans-serif;
     width: 800px;
 }
 
@@ -48,43 +61,80 @@ html {
 .topnav a.portfolio:hover,
 .topnav a.contact:hover {
     color: #6645F6;
-    font-size: 20.5px;
+    font-size: 22.5px;
+    transition: color 0.3s;
 }
 
 .home-div {
-    width: 100%;
-    height: 710px;
+    width: 98.8vw;
+    height: 770px;
+    margin-left: -8px;
     font-size: 20px;
-    font-family: "Cloud Lucent", sans-serif;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
     display: flex;
     align-items: center;
     padding-left: 75px;
     box-sizing: border-box;
+
 }
 
 .about-div {
     width: 100%;
-    height: 790px;
-    font-size: 20px;
+    height: 770px;
     font-family: "Cloud Lucent", sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #4b4b4b;
 }
 
 .portfolio-div {
     width: 100%;
-    height: 790px;
-    font-size: 20px;
+    height: 750px;
     font-family: "Cloud Lucent", sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: #4b4b4b;
 }
 
-.contact-div {
-    width: 100%;
-    height: 600px;
-    font-size: 20px;
-    font-family: "Cloud Lucent", sans-serif;
+.image {
+    margin-left: 400px;
+    margin-top: 50px;
+}
+
+.image img {
+    background: linear-gradient(to top right, #6600cc 0%, #6600ff 100%);
+    border-radius: 200px;
+}
+
+.social-icons {
+    width: 110px;
+    height: 50px;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    box-sizing: border-box;
+}
+
+.social-icons a {
+    text-decoration: none;
+}
+
+.social-icons i {
+    font-size: 30px;
+    color: #808080;
+    width: 30px;
+    height: 30px;
+    transition: color 0.3s;
+}
+
+.social-icons i:hover {
+    color: #6645F6;
 }
 
 .left-aligned-container {
-    margin-top: -70px;
+    margin-top: 0px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -98,6 +148,9 @@ html {
     color: #808080;
 }
 
+.name {
+    color: #6645F6;
+}
 .learn-more {
     width: 160px;
     height: 55px;
@@ -105,10 +158,14 @@ html {
     border-radius: 35px;
     border: 0;
     color: white;
-    font-family: "Cloud Lucent", sans-serif;
+    font-family: "Poppins", sans-serif;
     font-size: 17px;
+    font-weight: 600;
 }
 
+.whoami {
+    text-align: center;
+}
 .learn-more:hover {
     background-color: #4620f0;
 }
@@ -151,9 +208,10 @@ html {
 }
 
 .about-main-container {
-    padding-top: 40px;
-    padding-left: 800px;
-    width: 500px;
+    padding-top: 100px;
+    margin-left: 320px;
+    text-align: justify;
+    width: 800px;
 }
 
 .portfolio-main-container {
@@ -172,15 +230,6 @@ html {
 
 .project-card {
     display: flex;
-    margin: 1rem 0;
-}
-  
-.project-card-img {
-    width: 250px;
-}
-
-.project-card {
-    display: flex;
     flex-direction: column;
     width: 100%;
     max-width: 412px;
@@ -188,6 +237,13 @@ html {
     border: #d4d4d4 2px solid;
     border-radius: 12px;
     overflow: hidden;
+    box-shadow: 0px 15px 15px -10px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 20px 25px -15px rgba(0, 0, 0, 0.2); 
 }
 
 .project-card-img {
@@ -195,6 +251,11 @@ html {
     height: 412px;
     object-fit: cover;
     border-color: #6645F6;
+    transition: transform 0.3s ease; 
+}
+
+.project-card:hover .project-card-img {
+    transform: scale(1.05); 
 }
 
 .project-card-info {
@@ -208,6 +269,11 @@ html {
     font-size: 25px;
     color: black;
     text-decoration: none;
+    transition: font-size 0.3s ease;
+}
+
+.project-card:hover .project-name {
+    font-size: 27px; 
 }
 
 .project-link {
@@ -216,44 +282,18 @@ html {
     margin-top: auto;
     color: black;
     text-decoration: none;
+    transition: font-size 0.3s ease, color 0.3s ease; 
 }
 
-.project-card {
-    box-shadow: 0px 15px 15px -10px rgba(0, 0, 0, 0.06);
+.project-card:hover .project-link {
+    font-size: 15px;
+    color: #6645F6; 
 }
 
 .project-link:hover {
-    color: #6645F6;
-    font-size: 15px;
+    color: #6645F6; 
+    font-size: 15px; 
 }
 
-.contact-main-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-    gap: 1rem;
-    padding-top: 50px;
-}
 
-.social-card {
-    border: #d4d4d4 2px solid;
-    border-radius: 15px;
-    width: 600px;
-    height: 55px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
 
-.social-card a {
-    font-size: 25px;
-    text-align: center;
-    text-decoration: none;
-    color:black;
-}
-
-.social-card a:hover {
-    font-size: 26px;
-    color: #6645F6;
-}
