@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nicholas Gabriel N. Gonzales - CV</title>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: #f2f4f7;
+    color: #20242a;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.5;
+  }
+  .cv {
+    max-width: 900px;
+    margin: 32px auto;
+    background: #fff;
+    padding: 42px 52px;
+    box-shadow: 0 2px 14px rgba(0,0,0,.08);
+  }
+  header {
+    border-bottom: 2px solid #20242a;
+    padding-bottom: 20px;
+    margin-bottom: 28px;
+  }
+  h1 { margin: 0 0 4px; font-size: 32px; letter-spacing: .2px; }
+  .headline { font-size: 16px; font-weight: 600; margin-bottom: 10px; }
+  .contact { font-size: 13px; color: #4d555d; }
+  h2 {
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border-bottom: 1px solid #cfd4da;
+    padding-bottom: 6px;
+    margin: 28px 0 15px;
+  }
+  h3 { margin: 0 0 3px; font-size: 17px; }
+  h4 { margin: 0 0 8px; font-size: 14px; font-weight: 600; color: #4d555d; }
+  p { margin: 0 0 9px; font-size: 13.5px; }
+  .project { margin-bottom: 18px; }
+  .meta { font-size: 13px; margin-bottom: 7px; }
+  .meta strong { font-weight: 700; }
+  ul { margin: 5px 0 0 20px; padding: 0; }
+  li { margin: 4px 0; font-size: 13.5px; }
+  .skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 28px;
+  }
+  .skill { font-size: 13.5px; }
+  .education-item {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 15px;
+    margin-bottom: 15px;
+  }
+  .school { font-weight: 700; }
+  .degree { font-size: 13.5px; }
+  .location, .dates { font-size: 13px; color: #4d555d; }
+  @media (max-width: 650px) {
+    .cv { margin: 0; padding: 28px 22px; box-shadow: none; }
+    .skills-grid, .education-item { grid-template-columns: 1fr; }
+    .dates { margin-top: -10px; }
+  }
+  @media print {
+    body { background: #fff; }
+    .cv { margin: 0; max-width: none; box-shadow: none; }
+  }
+</style>
+</head>
+<body>
+<main class="cv">
+<header>
+  <h1>Nicholas Gabriel N. Gonzales</h1>
+  <div class="headline">IT Student | Computer Security | Backend Developer</div>
+  <div class="contact">Dagupan City, Pangasinan, Philippines &nbsp;|&nbsp; nicholasgabrielg720@gmail.com &nbsp;|&nbsp; 0976 383 0719 &nbsp;|&nbsp; FrostInvoker</div>
+</header>
+
+<section>
+<h2>Summary</h2>
+<p>Fourth-year IT student specializing in Computer Security, building secure web and mobile applications with a backend-first approach, and a strong interest in network and system security. Experienced across full-stack projects, from a community job marketplace with a secure e-wallet system to a blockchain-backed hospital management platform, consistently applying security practices like RBAC, input validation, and protection against common vulnerabilities (SQL injection, CSRF). Beyond software, I enjoy working with embedded systems (Arduino, ESP32) for IoT solutions. Growing my knowledge of cybersecurity frameworks (OWASP Top 10, NIST CSF, ISO 27001) and risk management alongside my development work. Open to internships opportunities in backend development, IoT &amp; sensor integration, and system or network security.</p>
+</section>
+
+<section>
+<h2>Projects</h2>
+
+<div class="project">
+  <h3>Microjobs: Community Micro-Job Marketplace Platform with Secure E-Wallet System</h3>
+  <div class="meta"><strong>Roles:</strong> Backend Developer</div>
+  <div class="meta"><strong>Tech Stack:</strong> React Native | JavaScript | Tailwind CSS | Node.js | Express.js | MongoDB</div>
+  <ul>
+    <li>Developed a community-based platform that connects local employers with workers for short-term job opportunities through an intuitive job posting and application system.</li>
+    <li>Implemented a secure in-app e-wallet with a simulated transaction tracking to enable safe and convenient cashless payments between employers and workers, using Paymongo test mode.</li>
+    <li>Hardened application security by implementing RBAC, rate limiting, input validation, and mitigating common vulnerabilities (SQL Injection, CSRF) to protect user's data.</li>
+  </ul>
+</div>
+
+<div class="project">
+  <h3>Hospital Management System using AI Chatbot &amp; Blockchain</h3>
+  <div class="meta"><strong>Roles:</strong> Backend Developer</div>
+  <div class="meta"><strong>Tech Stack:</strong> React | TailwindCSS | JavaScript | Node.js | Express.js | MongoDB | Python | Solidity/Ganache</div>
+  <ul>
+    <li>Developed a Hospital Management web application that streamlines booking and management of users in a generic hospital.</li>
+    <li>Built an AI chatbot in Python trained on a symptom-disease dataset to predict potential conditions and route users to the appropriate hospital department.</li>
+    <li>Developed a smart contract to secure user health records and appointment bookings on-chain.</li>
+    <li>Secured user's personal and health data by implementing RBAC, rate limiting, input validation, and mitigation of common vulnerabilities (SQL Injection, CSRF).</li>
+  </ul>
+</div>
+
+<div class="project">
+  <h3>FloodWatch: A Flood Level Detection System for Mobile Application</h3>
+  <div class="meta"><strong>Roles:</strong> IoT Developer (ESP32) &amp; Backend Developer</div>
+  <div class="meta"><strong>Tech Stack:</strong> Flutter | PHP | C++ | ESP32</div>
+  <ul>
+    <li>Developed a mobile application for flood monitoring and prediction for certain streets in the Philippines.</li>
+    <li>Developed an Arduino Project using ESP32 and an Ultrasonic Sensor for detecting the level of flood.</li>
+  </ul>
+</div>
+
+<div class="project">
+  <h3>NailScape: A Booking Application and Management for the NailScape Salon</h3>
+  <div class="meta"><strong>Roles:</strong> Backend Developer and Web Developer</div>
+  <div class="meta"><strong>Tech Stack:</strong> HTML | CSS | PHP | MySQL</div>
+  <ul>
+    <li>Developed a Web Admin Application for the Nailscape Salon, where-in the admin and their employees can manage users and bookings, and view sales analytics in real-time.</li>
+    <li>Developed a Mobile Application for the NailScape Salon, where-in the user can book appointments for the salon and get loyalty points and discounts with it.</li>
+  </ul>
+</div>
+
+<div class="project">
+  <h3>CafeFlow: A POS System made for Cafes</h3>
+  <div class="meta"><strong>Roles:</strong> Frontend &amp; Backend Developer</div>
+  <div class="meta"><strong>Tech Stack:</strong> React | TailwindCSS | JavaScript | Node.js | Express.js | MongoDB</div>
+  <ul>
+    <li>Developed a POS system for the Cafe transactions and smart inventory management that tracks amounts of ingredients used during a purchase, and automatically reduces the amount from the inventory list.</li>
+    <li>Implementation of analytics, that tracks sales and best-seller items in the store.</li>
+  </ul>
+</div>
+</section>
+
+<section>
+<h2>Skills</h2>
+<div class="skills-grid">
+  <div class="skill"><strong>Programming Languages:</strong> JavaScript (Node.js), Flutter, C++, PHP</div>
+  <div class="skill"><strong>Database:</strong> MySQL, PostgreSQL, MongoDB</div>
+  <div class="skill"><strong>Developer Tools:</strong> Git, Github, VSCode, Figma, Trello</div>
+  <div class="skill"><strong>Cloud Platforms:</strong> Vercel, Google Sites</div>
+  <div class="skill"><strong>Security Concepts:</strong> OWASP Top 10, NIST Cybersecurity Framework, ISO 27001, Risk Detection &amp; Management, Risk Matrix Analysis</div>
+</div>
+</section>
+
+<section>
+<h2>Education</h2>
+<div class="education-item">
+  <div>
+    <div class="school">PHINMA-University of Pangasinan</div>
+    <div class="degree">BS in Information Technology - Major in Computer Security</div>
+    <div class="location">Dagupan City, Pangasinan</div>
+  </div>
+  <div class="dates">2023 - Present</div>
+</div>
+<div class="education-item">
+  <div>
+    <div class="school">University of Luzon</div>
+    <div class="degree">Senior High School Graduate</div>
+    <div class="location">Dagupan City, Pangasinan</div>
+  </div>
+  <div class="dates">2018 - 2020</div>
+</div>
+</section>
+</main>
+</body>
+</html>
