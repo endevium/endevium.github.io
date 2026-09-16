@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ken Camagay - CV</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background: #fff;
+            color: #111;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 11pt;
+            line-height: 1.45;
+        }
+
+        .cv {
+            width: 210mm;
+            min-height: 297mm;
+            margin: 0 auto;
+            padding: 18mm 20mm;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            border-bottom: 1.5px solid #111;
+            padding-bottom: 12px;
+            margin-bottom: 18px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 26pt;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        header .title {
+            margin-top: 4px;
+            font-size: 12pt;
+        }
+
+        .contact {
+            margin-top: 8px;
+            font-size: 9.5pt;
+        }
+
+        .contact span:not(:last-child)::after {
+            content: "  |  ";
+            margin: 0 5px;
+        }
+
+        .contact a {
+            color: #111;
+            text-decoration: none;
+        }
+
+        /* Sections */
+        section {
+            margin-bottom: 17px;
+        }
+
+        section h2 {
+            font-size: 12pt;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            border-bottom: 1px solid #111;
+            padding-bottom: 3px;
+            margin: 0 0 9px;
+        }
+
+        p {
+            margin: 0 0 7px;
+        }
+
+        /* Education */
+        .entry {
+            margin-bottom: 12px;
+        }
+
+        .entry:last-child {
+            margin-bottom: 0;
+        }
+
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 20px;
+        }
+
+        .entry-title {
+            font-weight: 700;
+        }
+
+        .date {
+            white-space: nowrap;
+            font-size: 10pt;
+        }
+
+        .institution {
+            font-style: italic;
+            margin-top: 1px;
+        }
+
+        /* Projects */
+        .project {
+            margin-bottom: 12px;
+        }
+
+        .project:last-child {
+            margin-bottom: 0;
+        }
+
+        .project-title {
+            font-weight: 700;
+        }
+
+        .project-tech {
+            font-style: italic;
+            font-size: 10pt;
+            margin: 2px 0 4px;
+        }
+
+        .project a {
+            color: #111;
+            text-decoration: none;
+            font-size: 9.5pt;
+        }
+
+        .project a:hover {
+            text-decoration: underline;
+        }
+
+        /* Lists */
+        ul {
+            margin: 4px 0 0;
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 3px;
+        }
+
+        /* Skills */
+        .skills {
+            display: grid;
+            grid-template-columns: 140px 1fr;
+            row-gap: 5px;
+        }
+
+        .skill-category {
+            font-weight: 700;
+        }
+
+        /* Two-column bottom section */
+        .columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 35px;
+        }
+
+        /* Print */
+        @media print {
+            body {
+                background: #fff;
+            }
+
+            .cv {
+                width: 210mm;
+                min-height: 297mm;
+                margin: 0;
+                padding: 15mm 18mm;
+            }
+
+            a {
+                color: #111 !important;
+            }
+        }
+
+        @media screen and (max-width: 800px) {
+            .cv {
+                width: 100%;
+                min-height: auto;
+                padding: 30px;
+            }
+
+            .entry-header {
+                display: block;
+            }
+
+            .date {
+                display: block;
+                margin-top: 2px;
+            }
+
+            .columns {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="cv">
+
+    <!-- HEADER -->
+    <header>
+        <h1>KEN CAMAGAY</h1>
+        <div class="title">Bachelor of Science in Information Technology Student</div>
+
+        <div class="contact">
+            <span>Philippines</span>
+            <span>your.email@example.com</span>
+            <span>+63 XXX XXX XXXX</span>
+            <span>
+                <a href="https://github.com/hxt-iiixi" target="_blank">
+                    github.com/hxt-iiixi
+                </a>
+            </span>
+        </div>
+    </header>
+
+
+    <!-- PROFILE -->
+    <section>
+        <h2>Professional Summary</h2>
+
+        <p>
+            Fourth-year Information Technology student with hands-on experience
+            in web and software development. Familiar with developing database-driven
+            applications, responsive websites, and management systems through
+            academic and personal projects. Interested in software development,
+            web technologies, and building practical technology solutions.
+        </p>
+    </section>
+
+
+    <!-- EDUCATION -->
+    <section>
+        <h2>Education</h2>
+
+        <div class="entry">
+            <div class="entry-header">
+                <div class="entry-title">
+                    Bachelor of Science in Information Technology
+                </div>
+                <div class="date">
+                    4th Year
+                </div>
+            </div>
+
+            <div class="institution">
+                [Name of University / College], Philippines
+            </div>
+        </div>
+    </section>
+
+
+    <!-- PROJECTS -->
+    <section>
+        <h2>Projects</h2>
+
+        <div class="project">
+            <div class="project-title">
+                AMPOWER
+            </div>
+
+            <div class="project-tech">
+                JavaScript · Frontend · Backend
+            </div>
+
+            <p>
+                Developed a full-stack web application with separate frontend
+                and backend components. The project demonstrates experience
+                in application structure, JavaScript development, and
+                client-server application development.
+            </p>
+
+            <a href="https://github.com/hxt-iiixi/AMPOWER" target="_blank">
+                github.com/hxt-iiixi/AMPOWER
+            </a>
+        </div>
+
+
+        <div class="project">
+            <div class="project-title">
+                PD-LALAS — Pharmacy Management System
+            </div>
+
+            <div class="project-tech">
+                Laravel 10 · PHP · Blade · Tailwind CSS · MySQL · Chart.js
+            </div>
+
+            <p>
+                Developed a web-based pharmacy management system for handling
+                medicine inventory, supplies, sales, stock monitoring, and
+                administrative operations. Implemented dashboard visualization,
+                role-based access, OTP authentication, and administrative
+                approval features.
+            </p>
+
+            <a href="https://github.com/hxt-iiixi/pd-lan" target="_blank">
+                github.com/hxt-iiixi/pd-lan
+            </a>
+        </div>
+
+
+        <div class="project">
+            <div class="project-title">
+                MEOWIO
+            </div>
+
+            <div class="project-tech">
+                C#
+            </div>
+
+            <p>
+                Developed a C# software application as part of a collaborative
+                development project, applying object-oriented programming and
+                software development principles.
+            </p>
+
+            <a href="https://github.com/hxt-iiixi/MEOWIO-FINAL" target="_blank">
+                github.com/hxt-iiixi/MEOWIO-FINAL
+            </a>
+        </div>
+
+
+        <div class="project">
+            <div class="project-title">
+                DaguDorms
+            </div>
+
+            <div class="project-tech">
+                HTML · CSS · Human-Computer Interaction
+            </div>
+
+            <p>
+                Designed and developed a web-based dormitory-related interface
+                with emphasis on usability, user interaction, and web interface
+                design.
+            </p>
+
+            <a href="https://github.com/devesal/DaguDorms" target="_blank">
+                github.com/devesal/DaguDorms
+            </a>
+        </div>
+    </section>
+
+
+    <!-- TECHNICAL SKILLS -->
+    <section>
+        <h2>Technical Skills</h2>
+
+        <div class="skills">
+            <div class="skill-category">Programming</div>
+            <div>JavaScript, C#, PHP</div>
+
+            <div class="skill-category">Web Development</div>
+            <div>HTML, CSS, Laravel, Blade, Tailwind CSS</div>
+
+            <div class="skill-category">Database</div>
+            <div>MySQL</div>
+
+            <div class="skill-category">Tools</div>
+            <div>Git, GitHub, Chart.js</div>
+        </div>
+    </section>
+
+
+    <!-- ADDITIONAL INFORMATION -->
+    <div class="columns">
+
+        <section>
+            <h2>Core Skills</h2>
+
+            <ul>
+                <li>Web Application Development</li>
+                <li>Software Development</li>
+                <li>Database Management</li>
+                <li>Problem Solving</li>
+                <li>Team Collaboration</li>
+                <li>Responsive Web Design</li>
+            </ul>
+        </section>
+
+
+        <section>
+            <h2>Areas of Interest</h2>
+
+            <ul>
+                <li>Full-Stack Development</li>
+                <li>Web Technologies</li>
+                <li>Software Engineering</li>
+                <li>Database Systems</li>
+                <li>UI/UX Design</li>
+            </ul>
+        </section>
+
+    </div>
+
+</div>
+
+</body>
+</html>
