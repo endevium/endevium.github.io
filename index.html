@@ -1,13 +1,117 @@
-<h1>Machine Problem - ITE 386 Cloud Programming</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Machine Problem - ITE 386 Cloud Programming</title>
 
-<div>
-  <h1>CVs</h1>
-  <ul>
-    <li><a href="/camagay_cv.html">Camagay, Ken D.</a></li>
-    <li><a href="/enriquez_CV.html">Enriquez, Jonas J.</a></li>
-    <li><a href="/gonzales_cv.html">Gonzales, Nicholas Gabriel N.</a></li>
-    <li disabled><a href="" disabled>Mejia, Ashriel B.</a></li>
-    <li disabled><a href="" disabled>Ondoy, Oliver A.</a></li>
-    <li><a href="/paner_cv.html">Paner, John Rasheed C.</a></li>
-  </ul>
-</div>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      color: #1f2937;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    main {
+      width: 100%;
+      max-width: 700px;
+      background: #ffffff;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    h1 {
+      margin: 0;
+      text-align: center;
+      color: #111827;
+    }
+
+    main > h1 {
+      font-size: 28px;
+      margin-bottom: 35px;
+    }
+
+    div h1 {
+      font-size: 22px;
+      text-align: left;
+      margin-bottom: 20px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid #e5e7eb;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      margin-bottom: 12px;
+    }
+
+    li a {
+      display: block;
+      padding: 14px 18px;
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      color: #2563eb;
+      text-decoration: none;
+      transition: background 0.2s ease, border-color 0.2s ease;
+    }
+
+    li a:hover {
+      background: #eff6ff;
+      border-color: #93c5fd;
+    }
+
+    li[disabled] a {
+      color: #9ca3af;
+      background: #f3f4f6;
+      border-color: #e5e7eb;
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+
+    @media (max-width: 600px) {
+      main {
+        padding: 28px 22px;
+      }
+
+      main > h1 {
+        font-size: 23px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <h1>Machine Problem - ITE 386 Cloud Programming</h1>
+
+    <div>
+      <h1>CVs</h1>
+      <ul>
+        <li><a href="/camagay_cv.html">Camagay, Ken D.</a></li>
+        <li><a href="/enriquez_CV.html">Enriquez, Jonas J.</a></li>
+        <li><a href="/gonzales_cv.html">Gonzales, Nicholas Gabriel N.</a></li>
+        <li disabled><a href="" disabled>Mejia, Ashriel B.</a></li>
+        <li disabled><a href="" disabled>Ondoy, Oliver A.</a></li>
+        <li><a href="/paner_cv.html">Paner, John Rasheed C.</a></li>
+      </ul>
+    </div>
+  </main>
+</body>
+</html>
+
