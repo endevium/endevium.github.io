@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ken Camagay - CV</title>
+    <title>Ken D. Camagay | CV</title>
 
     <style>
         * {
@@ -12,80 +12,140 @@
 
         body {
             margin: 0;
-            background: #fff;
-            color: #111;
+            background: #f3f3ef;
+            color: #161616;
             font-family: Arial, Helvetica, sans-serif;
-            font-size: 11pt;
+            font-size: 10.5pt;
             line-height: 1.45;
+        }
+
+        .back-home {
+            position: fixed;
+            top: 22px;
+            left: 22px;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            padding: 10px 15px;
+            background: #111827;
+            border: 1px solid #111827;
+            border-radius: 8px;
+            color: #ffffff;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            box-shadow: 4px 4px 0 #d9d9d3;
+            transition: 0.2s ease;
+        }
+
+        .back-home:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0 #d9d9d3;
+            background: #3157d5;
+            border-color: #3157d5;
+        }
+
+        .back-arrow {
+            font-size: 17px;
+            line-height: 1;
+            transition: transform 0.2s ease;
+        }
+
+        .back-home:hover .back-arrow {
+            transform: translateX(-3px);
         }
 
         .cv {
             width: 210mm;
             min-height: 297mm;
-            margin: 0 auto;
-            padding: 18mm 20mm;
+            margin: 35px auto;
+            padding: 17mm 18mm;
+            background: #ffffff;
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.08);
         }
 
-        /* Header */
         header {
-            text-align: center;
-            border-bottom: 1.5px solid #111;
-            padding-bottom: 12px;
-            margin-bottom: 18px;
+            border-bottom: 2px solid #161616;
+            padding-bottom: 16px;
+            margin-bottom: 17px;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            gap: 22px;
+        }
+
+        .profile-pic {
+            width: 105px;
+            height: 105px;
+            flex-shrink: 0;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 8px;
+            border: 1px solid #d1d5db;
+        }
+
+        .header-info {
+            flex: 1;
+            min-width: 0;
         }
 
         header h1 {
             margin: 0;
-            font-size: 26pt;
-            font-weight: 700;
-            letter-spacing: 0.5px;
+            font-size: 27pt;
+            font-weight: 800;
+            letter-spacing: -0.8px;
         }
 
-        header .title {
-            margin-top: 4px;
-            font-size: 12pt;
+        .title {
+            margin-top: 3px;
+            font-size: 11.5pt;
+            font-weight: 600;
         }
 
         .contact {
-            margin-top: 8px;
-            font-size: 9.5pt;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px 15px;
+            margin-top: 10px;
+            font-size: 8.8pt;
         }
 
-        .contact span:not(:last-child)::after {
-            content: "  |  ";
-            margin: 0 5px;
+        .contact span {
+            position: relative;
         }
 
         .contact a {
-            color: #111;
+            color: #161616;
             text-decoration: none;
         }
 
-        /* Sections */
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
         section {
-            margin-bottom: 17px;
+            margin-bottom: 15px;
         }
 
         section h2 {
-            font-size: 12pt;
-            text-transform: uppercase;
-            letter-spacing: 0.8px;
-            border-bottom: 1px solid #111;
+            margin: 0 0 8px;
             padding-bottom: 3px;
-            margin: 0 0 9px;
+            border-bottom: 1px solid #161616;
+            font-size: 11.5pt;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         p {
-            margin: 0 0 7px;
+            margin: 0 0 6px;
         }
 
-        /* Education */
         .entry {
-            margin-bottom: 12px;
-        }
-
-        .entry:last-child {
-            margin-bottom: 0;
+            margin-bottom: 10px;
         }
 
         .entry-header {
@@ -99,59 +159,28 @@
             font-weight: 700;
         }
 
+        .institution {
+            margin-top: 1px;
+            font-style: italic;
+        }
+
         .date {
             white-space: nowrap;
-            font-size: 10pt;
-        }
-
-        .institution {
-            font-style: italic;
-            margin-top: 1px;
-        }
-
-        /* Projects */
-        .project {
-            margin-bottom: 12px;
-        }
-
-        .project:last-child {
-            margin-bottom: 0;
-        }
-
-        .project-title {
-            font-weight: 700;
-        }
-
-        .project-tech {
-            font-style: italic;
-            font-size: 10pt;
-            margin: 2px 0 4px;
-        }
-
-        .project a {
-            color: #111;
-            text-decoration: none;
             font-size: 9.5pt;
         }
 
-        .project a:hover {
-            text-decoration: underline;
+        .details {
+            margin: 5px 0 0;
+            padding-left: 18px;
         }
 
-        /* Lists */
-        ul {
-            margin: 4px 0 0;
-            padding-left: 20px;
+        .details li {
+            margin-bottom: 2px;
         }
 
-        li {
-            margin-bottom: 3px;
-        }
-
-        /* Skills */
         .skills {
             display: grid;
-            grid-template-columns: 140px 1fr;
+            grid-template-columns: 165px 1fr;
             row-gap: 5px;
         }
 
@@ -159,50 +188,129 @@
             font-weight: 700;
         }
 
-        /* Two-column bottom section */
-        .columns {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 35px;
+        .project {
+            margin-bottom: 13px;
         }
 
-        /* Print */
+        .project:last-child {
+            margin-bottom: 0;
+        }
+
+        .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 20px;
+        }
+
+        .project-title {
+            font-weight: 700;
+            font-size: 11pt;
+        }
+
+        .project-year {
+            white-space: nowrap;
+            font-size: 9pt;
+            font-weight: 600;
+        }
+
+        .project-tech {
+            margin: 2px 0 5px;
+            font-size: 9pt;
+            font-style: italic;
+            color: #444;
+        }
+
+        .project ul {
+            margin: 4px 0 0;
+            padding-left: 18px;
+        }
+
+        .project li {
+            margin-bottom: 2px;
+        }
+
+        @media screen and (max-width: 900px) {
+            .cv {
+                width: calc(100% - 30px);
+                min-height: auto;
+                margin: 75px auto 20px;
+                padding: 30px;
+            }
+        }
+
+        @media screen and (max-width: 600px) {
+            .back-home {
+                top: 12px;
+                left: 12px;
+                width: 42px;
+                height: 42px;
+                padding: 0;
+                justify-content: center;
+                border-radius: 50%;
+            }
+
+            .back-home span:last-child {
+                display: none;
+            }
+
+            .cv {
+                width: 100%;
+                margin: 65px 0 0;
+                padding: 25px 20px;
+                box-shadow: none;
+            }
+
+            header h1 {
+                font-size: 23pt;
+            }
+
+            .contact {
+                flex-direction: column;
+                gap: 3px;
+            }
+
+            .entry-header,
+            .project-header {
+                display: block;
+            }
+
+            .date,
+            .project-year {
+                display: block;
+                margin-top: 2px;
+            }
+
+            .skills {
+                grid-template-columns: 1fr;
+                row-gap: 2px;
+            }
+
+            .skill-category {
+                margin-top: 6px;
+            }
+        }
+
         @media print {
             body {
-                background: #fff;
+                background: #ffffff;
+            }
+
+            .back-home {
+                display: none;
             }
 
             .cv {
                 width: 210mm;
                 min-height: 297mm;
                 margin: 0;
-                padding: 15mm 18mm;
+                padding: 14mm 17mm;
+                box-shadow: none;
             }
 
             a {
-                color: #111 !important;
-            }
-        }
-
-        @media screen and (max-width: 800px) {
-            .cv {
-                width: 100%;
-                min-height: auto;
-                padding: 30px;
-            }
-
-            .entry-header {
-                display: block;
-            }
-
-            .date {
-                display: block;
-                margin-top: 2px;
-            }
-
-            .columns {
-                grid-template-columns: 1fr;
-                gap: 0;
+                color: #161616 !important;
+                text-decoration: none !important;
             }
         }
     </style>
@@ -210,41 +318,82 @@
 
 <body>
 
-<div class="cv">
+<a href="index.html" class="back-home">
+    <span class="back-arrow">←</span>
+    <span>Back to Directory</span>
+</a>
 
-    <!-- HEADER -->
-    <header>
-        <h1>KEN CAMAGAY</h1>
-        <div class="title">Bachelor of Science in Information Technology Student</div>
+<main class="cv">
 
-        <div class="contact">
-            <span>Philippines</span>
-            <span>your.email@example.com</span>
-            <span>+63 XXX XXX XXXX</span>
-            <span>
-                <a href="https://github.com/hxt-iiixi" target="_blank">
-                    github.com/hxt-iiixi
-                </a>
-            </span>
+   <header>
+        <div class="header-content">
+
+            <img
+                src="imgs/camagay_pic.jpg"
+                alt="Ken D. Camagay"
+                class="profile-pic"
+            >
+
+            <div class="header-info">
+                <h1>Ken D. Camagay</h1>
+
+                <div class="title">
+                    Information Technology Student | Full-Stack, Mobile & AI Development
+                </div>
+
+                <div class="contact">
+                    <span>Dagupan, Pangasinan</span>
+
+                    <span>
+                        <a href="mailto:kencamagay5@gmail.com">
+                            kencamagay5@gmail.com
+                        </a>
+                    </span>
+
+                    <span>
+                        <a href="tel:+639455376486">
+                            0945 537 6486
+                        </a>
+                    </span>
+
+                    <span>
+                        <a href="https://ken-portfolio-neon.vercel.app/" target="_blank">
+                            Portfolio
+                        </a>
+                    </span>
+
+                    <span>
+                        <a href="https://www.linkedin.com/in/ken-camagay-024a56429" target="_blank">
+                            LinkedIn
+                        </a>
+                    </span>
+
+                    <span>
+                        <a href="https://github.com/hxt-iixi" target="_blank">
+                            GitHub
+                        </a>
+                    </span>
+                </div>
+            </div>
+
         </div>
     </header>
 
-
-    <!-- PROFILE -->
     <section>
-        <h2>Professional Summary</h2>
+        <h2>Summary</h2>
 
         <p>
-            Fourth-year Information Technology student with hands-on experience
-            in web and software development. Familiar with developing database-driven
-            applications, responsive websites, and management systems through
-            academic and personal projects. Interested in software development,
-            web technologies, and building practical technology solutions.
+            Information Technology student with hands-on experience developing
+            full-stack web and mobile applications through academic and collaborative
+            projects. Experienced with React, React Native, TypeScript, Python, PHP,
+            Node.js, FastAPI, Laravel, and SQL/NoSQL databases. Skilled in building
+            REST APIs, authentication systems, responsive interfaces, real-time
+            features, database-driven applications, and computer vision solutions.
+            Seeking opportunities to contribute to software development teams while
+            continuing to grow as a developer.
         </p>
     </section>
 
-
-    <!-- EDUCATION -->
     <section>
         <h2>Education</h2>
 
@@ -253,162 +402,179 @@
                 <div class="entry-title">
                     Bachelor of Science in Information Technology
                 </div>
+
                 <div class="date">
-                    4th Year
+                    July 2023 – June 2027
                 </div>
             </div>
 
             <div class="institution">
-                [Name of University / College], Philippines
+                PHINMA - University of Pangasinan
+            </div>
+
+            <ul class="details">
+                <li>Expected Graduation: June 2027</li>
+                <li>
+                    Relevant Coursework: Cloud Programming, Networking,
+                    Data Structures and Algorithms, Systems Integration and
+                    Architecture, Advanced Database Systems, Information Management,
+                    Human-Computer Interaction
+                </li>
+            </ul>
+        </div>
+
+        <div class="entry">
+            <div class="entry-title">
+                National Certificate II in Computer System Servicing NC II
+            </div>
+
+            <div class="institution">
+                Technical Education and Skills Development Authority
+            </div>
+
+            <ul class="details">
+                <li>Certificate of Training Completion</li>
+                <li>Certificate of Passing the Assessment</li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <h2>Skills</h2>
+
+        <div class="skills">
+            <div class="skill-category">Programming Languages</div>
+            <div>Python, TypeScript, JavaScript, PHP, SQL</div>
+
+            <div class="skill-category">Frontend & Mobile</div>
+            <div>React.js, React Native, Expo, Flutter, Tailwind CSS, Blade</div>
+
+            <div class="skill-category">Backend & APIs</div>
+            <div>Node.js, Express.js, FastAPI, Laravel, REST APIs, JWT Authentication</div>
+
+            <div class="skill-category">Databases</div>
+            <div>MySQL, PostgreSQL, MongoDB</div>
+
+            <div class="skill-category">AI, Computer Vision & Data</div>
+            <div>OpenCV, MediaPipe, NumPy, scikit-learn</div>
+
+            <div class="skill-category">Tools & Technologies</div>
+            <div>
+                Git, GitHub, Socket.IO, Axios, AJAX, jQuery, Chart.js,
+                Recharts, Vite, Railway
             </div>
         </div>
     </section>
 
-
-    <!-- PROJECTS -->
     <section>
         <h2>Projects</h2>
 
         <div class="project">
-            <div class="project-title">
-                AMPOWER
+            <div class="project-header">
+                <div class="project-title">SignSight</div>
+                <div class="project-year">2026</div>
             </div>
 
             <div class="project-tech">
-                JavaScript · Frontend · Backend
+                React Native · Expo · TypeScript · FastAPI · Python · OpenCV ·
+                NumPy · scikit-learn · MediaPipe · Vision Camera
             </div>
 
-            <p>
-                Developed a full-stack web application with separate frontend
-                and backend components. The project demonstrates experience
-                in application structure, JavaScript development, and
-                client-server application development.
-            </p>
+            <ul>
+                <li>
+                    Developed a mobile sign recognition application that uses
+                    camera-based hand and pose tracking to recognize static signs
+                    and dynamic gestures in real time.
+                </li>
 
-            <a href="https://github.com/hxt-iiixi/AMPOWER" target="_blank">
-                github.com/hxt-iiixi/AMPOWER
-            </a>
+                <li>
+                    Built the React Native and Expo mobile application with live
+                    letter and word recognition, camera processing, and
+                    text-to-speech functionality.
+                </li>
+
+                <li>
+                    Integrated a FastAPI backend for model inference, dataset
+                    management, training workflows, and model operations.
+                </li>
+
+                <li>
+                    Implemented an iterative dataset collection and model
+                    improvement workflow to support continued recognition development.
+                </li>
+            </ul>
         </div>
 
-
         <div class="project">
-            <div class="project-title">
-                PD-LALAS — Pharmacy Management System
+            <div class="project-header">
+                <div class="project-title">AmPower</div>
+                <div class="project-year">2025</div>
             </div>
 
             <div class="project-tech">
-                Laravel 10 · PHP · Blade · Tailwind CSS · MySQL · Chart.js
+                React · TypeScript · Tailwind CSS · Node.js · Express.js ·
+                MongoDB · Socket.IO · Axios · Recharts
             </div>
 
-            <p>
-                Developed a web-based pharmacy management system for handling
-                medicine inventory, supplies, sales, stock monitoring, and
-                administrative operations. Implemented dashboard visualization,
-                role-based access, OTP authentication, and administrative
-                approval features.
-            </p>
+            <ul>
+                <li>
+                    Developed a full-stack web platform for managing church
+                    activities, events, schedules, and ministry operations.
+                </li>
 
-            <a href="https://github.com/hxt-iiixi/pd-lan" target="_blank">
-                github.com/hxt-iiixi/pd-lan
-            </a>
+                <li>
+                    Built responsive React and TypeScript interfaces with routing,
+                    dashboards, forms, and data visualization.
+                </li>
+
+                <li>
+                    Developed backend services using Node.js and Express.js with
+                    MongoDB for application data management.
+                </li>
+
+                <li>
+                    Implemented JWT authentication, file uploads, email services,
+                    and real-time communication using Socket.IO.
+                </li>
+            </ul>
         </div>
 
-
         <div class="project">
-            <div class="project-title">
-                MEOWIO
+            <div class="project-header">
+                <div class="project-title">PD-LAN</div>
+                <div class="project-year">2024</div>
             </div>
 
             <div class="project-tech">
-                C#
+                Laravel 10 · PHP · Blade · Tailwind CSS · MySQL · Chart.js ·
+                AJAX · jQuery · Vite · Railway
             </div>
 
-            <p>
-                Developed a C# software application as part of a collaborative
-                development project, applying object-oriented programming and
-                software development principles.
-            </p>
+            <ul>
+                <li>
+                    Developed a web-based pharmacy sales and inventory management
+                    system for medicines, supplies, sales, and stock monitoring.
+                </li>
 
-            <a href="https://github.com/hxt-iiixi/MEOWIO-FINAL" target="_blank">
-                github.com/hxt-iiixi/MEOWIO-FINAL
-            </a>
-        </div>
+                <li>
+                    Implemented OTP authentication, administrator approval,
+                    role-based access control, and medicine and supply management.
+                </li>
 
+                <li>
+                    Developed sales recording features with discount handling
+                    and database-driven inventory updates.
+                </li>
 
-        <div class="project">
-            <div class="project-title">
-                DaguDorms
-            </div>
-
-            <div class="project-tech">
-                HTML · CSS · Human-Computer Interaction
-            </div>
-
-            <p>
-                Designed and developed a web-based dormitory-related interface
-                with emphasis on usability, user interaction, and web interface
-                design.
-            </p>
-
-            <a href="https://github.com/devesal/DaguDorms" target="_blank">
-                github.com/devesal/DaguDorms
-            </a>
+                <li>
+                    Built dashboard visualizations and AJAX-based interactions
+                    and configured the application for Railway deployment.
+                </li>
+            </ul>
         </div>
     </section>
 
-
-    <!-- TECHNICAL SKILLS -->
-    <section>
-        <h2>Technical Skills</h2>
-
-        <div class="skills">
-            <div class="skill-category">Programming</div>
-            <div>JavaScript, C#, PHP</div>
-
-            <div class="skill-category">Web Development</div>
-            <div>HTML, CSS, Laravel, Blade, Tailwind CSS</div>
-
-            <div class="skill-category">Database</div>
-            <div>MySQL</div>
-
-            <div class="skill-category">Tools</div>
-            <div>Git, GitHub, Chart.js</div>
-        </div>
-    </section>
-
-
-    <!-- ADDITIONAL INFORMATION -->
-    <div class="columns">
-
-        <section>
-            <h2>Core Skills</h2>
-
-            <ul>
-                <li>Web Application Development</li>
-                <li>Software Development</li>
-                <li>Database Management</li>
-                <li>Problem Solving</li>
-                <li>Team Collaboration</li>
-                <li>Responsive Web Design</li>
-            </ul>
-        </section>
-
-
-        <section>
-            <h2>Areas of Interest</h2>
-
-            <ul>
-                <li>Full-Stack Development</li>
-                <li>Web Technologies</li>
-                <li>Software Engineering</li>
-                <li>Database Systems</li>
-                <li>UI/UX Design</li>
-            </ul>
-        </section>
-
-    </div>
-
-</div>
+</main>
 
 </body>
 </html>
