@@ -21,21 +21,43 @@
     padding: 28px 34px;
   }
   header {
-    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin-bottom: 18px;
   }
+
+  .header-info {
+    flex: 1;
+    text-align: center;
+  }
+
+  .profile-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-left: 24px;
+  }
+
   h1 {
     margin: 0 0 3px;
     font-size: 22pt;
     letter-spacing: 0.2px;
   }
+
   .headline {
     font-size: 11pt;
     margin-bottom: 8px;
   }
+
   .contact {
     font-size: 9.2pt;
     line-height: 1.6;
+  }
+
+  .contact span {
+    white-space: nowrap;
   }
   .contact span { white-space: nowrap; }
   section { margin-top: 14px; }
@@ -149,14 +171,25 @@
   </a>
 <div class="page">
 <header>
-  <h1>Paner, John Rasheed C.</h1>
-  <div class="headline">Information Technology Student | Software Engineering &amp; AI Engineering</div>
-  <div class="contact">
-    <span>Mangaldan, Pangasinan</span> &nbsp;|&nbsp;
-    <span>jrasheedpaner@gmail.com</span> &nbsp;|&nbsp;
-    <span>0995 724 5708</span> &nbsp;|&nbsp;
-    <span>john-rasheed-compacion-paner</span><br>
-    <span>GitHub: endevium</span>
+  <img
+    src="imgs/paner.jpg"
+    alt="John Rasheed C. Paner"
+    class="profile-image"
+  >
+  
+  <div class="header-info">
+    <h1>Paner, John Rasheed C.</h1>
+    <div class="headline">
+      Information Technology Student | Software Engineering &amp; AI Engineering
+    </div>
+
+    <div class="contact">
+      <span>Mangaldan, Pangasinan</span> &nbsp;|&nbsp;
+      <span>jrasheedpaner@gmail.com</span> &nbsp;|&nbsp;
+      <span>0995 724 5708</span> &nbsp;|&nbsp;
+      <span>john-rasheed-compacion-paner</span><br>
+      <span>GitHub: endevium</span>
+    </div>
   </div>
 </header>
 
