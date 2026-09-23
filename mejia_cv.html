@@ -3,317 +3,279 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mejia-CV</title>
+    <title>AJBM CV</title>
 
     <style>
       * {
-        box-sizing: border-box;
+          box-sizing: border-box;
       }
 
       html {
-        background: #e5e5e5;
+          background: #e5e5e5;
       }
 
       body {
-        font-family: Arial, Helvetica, sans-serif;
-        background: white;
-        color: #111;
-        width: 8.5in;
-        min-height: 11in;
-        margin: 30px auto;
-        padding: 0.45in 0.6in;
-        font-size: 10px;
-        line-height: 1.35;
+          font-family: Arial, Helvetica, sans-serif;
+          background: white;
+          color: #111;
+          width: 8.5in;
+          min-height: 11in;
+          margin: 30px auto;
+          padding: 0.45in 0.6in;
+          font-size: 10px;
+          line-height: 1.35;
       }
 
       header {
-        position: relative;
-        min-height: auto;
-        margin-bottom: 15px;
-        text-align: center;
+          position: relative;
+          min-height: 150px;
+          margin-bottom: 15px;
+      }
+
+      header > img {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 150px;
+          height: 150px;
+          object-fit: cover;
+      }
+
+      header {
+          position: relative;
+          min-height: 150px;
+          margin-bottom: 15px;
+      }
+
+      header > img {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 150px;
+          height: 150px;
+          object-fit: cover;
       }
 
       .header-content {
-        margin-left: 0;
-        width: 100%;
-        text-align: center;
+          margin-left: 170px;
+          width: calc(100% - 170px);
+          text-align: center;
       }
 
       header h1 {
-        font-size: 30px;
-        font-weight: 700;
-        margin: 0;
+          font-size: 30px;
+          font-weight: 700;
+          margin: 0;
       }
 
       .job-title {
-        font-size: 10.5px;
-        font-weight: 400;
-        margin: 3px 0 12px;
+          font-size: 10.5px;
+          font-weight: 400;
+          margin: 3px 0 12px;
       }
 
       .contact-info {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 7px 15px;
-        font-size: 8.5px;
-        line-height: 1.5;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: wrap;
+          gap: 7px 15px;
+          font-size: 8.5px;
+          line-height: 1.5;
       }
 
       .contact-info span {
-        white-space: nowrap;
+          white-space: nowrap;
       }
 
       .contact-info i {
-        margin-right: 4px;
-        font-size: 9px;
+          margin-right: 4px;
+          font-size: 9px;
       }
 
+
       section {
-        margin-top: 10px;
-        margin-bottom: 10px;
+          margin-top: 10px;
+          margin-bottom: 10px;
       }
 
       section > h2 {
-        font-size: 12px;
-        font-weight: 700;
-        margin: 0 0 6px 0;
-        padding-bottom: 3px;
-        border-bottom: 1px solid #222;
+          font-size: 12px;
+          font-weight: 700;
+          margin: 0 0 6px 0;
+          padding-bottom: 3px;
+          border-bottom: 1px solid #222;
       }
 
+
       section p {
-        margin: 2px 0;
+          margin: 2px 0;
       }
 
       section strong {
-        font-weight: 700;
+          font-weight: 700;
       }
 
+
       .project {
-        margin-bottom: 8px;
+          margin-bottom: 8px;
       }
 
       .project-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: baseline;
-        gap: 15px;
+          display: flex;
+          justify-content: space-between;
+          align-items: baseline;
+
+          gap: 15px;
       }
 
       .project-header h3 {
-        font-size: 10.5px;
-        margin: 0;
-        font-weight: 700;
+          font-size: 10.5px;
+          margin: 0;
+          font-weight: 700;
       }
 
       .project-header span {
-        font-size: 9px;
-        white-space: nowrap;
-        font-style: italic;
+          font-size: 9px;
+          white-space: nowrap;
+          font-style: italic;
       }
 
       .roles {
-        margin: 2px 0 1px;
-        font-size: 9.5px;
+          margin: 2px 0 1px;
+          font-size: 9.5px;
       }
 
       .technologies {
-        margin: 0 0 2px;
-        font-size: 9px;
-        font-style: italic;
+          margin: 0 0 2px;
+          font-size: 9px;
+          font-style: italic;
       }
 
+
       ul {
-        margin-top: 2px;
-        margin-bottom: 5px;
-        padding-left: 17px;
+          margin-top: 2px;
+          margin-bottom: 5px;
+          padding-left: 17px;
       }
 
       li {
-        font-size: 9px;
-        margin-bottom: 1px;
-        padding-left: 2px;
+          font-size: 9px;
+          margin-bottom: 1px;
+          padding-left: 2px;
       }
 
       li::marker {
-        font-size: 7px;
+          font-size: 7px;
       }
 
+
       .education {
-        margin-top: 2px;
+          margin-top: 2px;
       }
 
       .education-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: baseline;
+          display: flex;
+          justify-content: space-between;
+          align-items: baseline;
       }
 
       .education-header h3 {
-        font-size: 10.5px;
-        margin: 0;
+          font-size: 10.5px;
+          margin: 0;
       }
 
       .education-header span {
-        font-size: 9px;
+          font-size: 9px;
       }
 
       .education-details {
-        display: flex;
-        justify-content: space-between;
-        align-items: baseline;
+          display: flex;
+          justify-content: space-between;
+          align-items: baseline;
       }
 
       .education-details p {
-        font-size: 9.5px;
-        margin: 2px 0;
+          font-size: 9.5px;
+          margin: 2px 0;
       }
 
       .education-details span {
-        font-size: 9px;
-        white-space: nowrap;
+          font-size: 9px;
+          white-space: nowrap;
       }
 
+
       .certification {
-        margin-bottom: 7px;
+          margin-bottom: 7px;
       }
 
       .cert-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: baseline;
+          display: flex;
+          justify-content: space-between;
+          align-items: baseline;
       }
 
       .cert-header h3 {
-        font-size: 10.5px;
-        margin: 0;
+          font-size: 10.5px;
+          margin: 0;
       }
 
       .cert-header span {
-        font-size: 9px;
+          font-size: 9px;
       }
 
       .certification ul {
-        margin-top: 2px;
-        margin-bottom: 0;
+          margin-top: 2px;
+          margin-bottom: 0;
       }
 
       .certification li {
-        font-size: 9px;
+          font-size: 9px;
       }
 
       .cert-date {
-        text-align: right;
-        font-size: 8.5px;
-        font-style: italic;
-        margin: 0;
+          text-align: right;
+          font-size: 8.5px;
+          font-style: italic;
+          margin: 0;
       }
+
+
 
       a {
-        color: #111;
-        text-decoration: none;
+          color: #111;
+          text-decoration: none;
       }
 
+
+
       @page {
-        size: Letter;
-        margin: 0;
+          size: Letter;
+          margin: 0;
       }
 
       @media print {
-        html {
-          background: white;
-        }
 
-        body {
-          width: 8.5in;
-          min-height: 11in;
+          html {
+              background: white;
+          }
 
-          margin: 0;
-          padding: 0.45in 0.6in;
-        }
+          body {
+              width: 8.5in;
+              min-height: 11in;
+
+              margin: 0;
+              padding: 0.45in 0.6in;
+          }
       }
-      .back-home {
-        position: fixed;
-        top: 22px;
-        left: 22px;
-        z-index: 9999;
-
-        display: flex;
-        align-items: center;
-        gap: 9px;
-
-        padding: 10px 15px;
-
-        background: #111827;
-        border: 1px solid #111827;
-        border-radius: 8px;
-
-        color: #ffffff;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 12px;
-        font-weight: 600;
-        text-decoration: none;
-
-        box-shadow: 4px 4px 0 #d9d9d3;
-
-        transition:
-            transform 0.2s ease,
-            box-shadow 0.2s ease,
-            background 0.2s ease;
-    }
-
-    .back-home:hover {
-        transform: translate(-2px, -2px);
-        box-shadow: 6px 6px 0 #d9d9d3;
-        background: #3157d5;
-        border-color: #3157d5;
-    }
-
-    .back-arrow {
-        font-size: 17px;
-        line-height: 1;
-        transition: transform 0.2s ease;
-    }
-
-    .back-home:hover .back-arrow {
-        transform: translateX(-3px);
-    }
-
-    @media (max-width: 700px) {
-        .back-home {
-            top: 12px;
-            left: 12px;
-
-            width: 40px;
-            height: 40px;
-            padding: 0;
-
-            justify-content: center;
-
-            border-radius: 50%;
-        }
-
-        .back-home span:last-child {
-            display: none;
-        }
-    }
-
-    @media print {
-        .back-home {
-            display: none;
-        }
-    }
     </style>
   </head>
 
   <body>
-    <a href="index.html" class="back-home">
-      <span class="back-arrow">←</span>
-      <span>Back to Directory</span>
-  </a>
     <header>
+      <img src="mejia_pic.jpg" alt="Profile Picture" width="150" />
+
       <div class="header-content">
         <h1>Ashriel Jirah B. Mejia</h1>
 
@@ -323,30 +285,25 @@
 
         <div class="contact-info">
           <span>📍 Dagupan City, Pangasinan, Philippines</span>
-
-          <span>
-            ✉ <i class="fa-regular fa-envelope"></i>
+          <span
+            >✉ <i class="fa-regular fa-envelope"></i>
             <a href="mailto:mejiaashriel@gmail.com"> mejiaashriel@gmail.com </a>
           </span>
-
           <span>☎ 0992 862 0355</span>
-
-          <span>
-            🔗<i class="fa-solid fa-link"></i>
+          <span
+            >🔗<i class="fa-solid fa-link"></i>
             <a href="https://zashtaymzie.github.io" target="_blank">
               zashtaymzie.github.io
             </a>
           </span>
-
-          <span>
-            💼<i class="fa-brands fa-linkedin"></i>
+          <span
+            >💼<i class="fa-brands fa-linkedin"></i>
             <a href="https://www.linkedin.com/in/ashrielmejia" target="_blank">
               ashrielmejia
             </a>
           </span>
-
-          <span>
-            💻 <i class="fa-brands fa-github"></i>
+          <span
+            >💻 <i class="fa-brands fa-github"></i>
             <a href="https://github.com/ZAshTaymZie" target="_blank">
               ZAshTaymZie
             </a>
@@ -388,7 +345,6 @@
 
     <section>
       <h2>Summary</h2>
-
       <p>
         I'm an Information Technology student specializing in Computer Security,
         with a growing passion for cybersecurity, software development, web
@@ -412,18 +368,15 @@
               E-Wallet System
             </h3>
           </td>
-
           <td>
-            <p>(Dec 2025 – present)</p>
+            <p>Dec 2025 – present</p>
           </td>
         </tr>
-
         <tr>
           <td>
             <p>Roles: Project Manager, Frontend Developer, UI/UX Designer</p>
           </td>
         </tr>
-
         <tr>
           <td>
             <p>
@@ -440,13 +393,11 @@
           with workers for short-term job opportunities through an intuitive job
           posting and application system.
         </li>
-
         <li>
           Implemented a secure in-app e-wallet with transaction tracking to
           enable safe and convenient cashless payments between employers and
           workers
         </li>
-
         <li>
           Built user verification and a two-way rating and feedback system to
           promote trust, accountability, and transparency within the platform.
@@ -458,18 +409,15 @@
           <td>
             <h3>ScholarZone: Scholarship Application and Management System</h3>
           </td>
-
           <td>
-            <p>(Dec 2024 – Mar 2025)</p>
+            <p>Dec 2024 – Mar 2025</p>
           </td>
         </tr>
-
         <tr>
           <td>
             <p>Roles: Frontend Developer</p>
           </td>
         </tr>
-
         <tr>
           <td>
             <p>
@@ -493,18 +441,15 @@
               VoteSmart: Election Information and Voter Verification Platform
             </h3>
           </td>
-
           <td>
-            <p>(Aug 2025 – Nov 2025)</p>
+            <p>Aug 2025 – Nov 2025</p>
           </td>
         </tr>
-
         <tr>
           <td>
             <p>Roles: Project Manager, Frontend Developer, UI/UX Designer</p>
           </td>
         </tr>
-
         <tr>
           <td>
             <p>
@@ -519,7 +464,6 @@
           Created a user-friendly platform that provides election information
           and voter registration verification.
         </li>
-
         <li>
           Developed a platform that simplifies access to election information
           and voter registration status.
@@ -538,17 +482,15 @@
             <h3>PHINMA - University of Pangasinan</h3>
           </td>
           <td>
-            <p>(Dagupan City, Pangasinan)</p>
+            <p>Dagupan City, Pangasinan</p>
           </td>
         </tr>
-
         <tr>
           <td>
             <p>BS in Information Technology Major in Computer Security</p>
           </td>
-
           <td>
-            <p>(July 2023 – present)</p>
+            <p>July 2023 – present</p>
           </td>
         </tr>
       </table>
@@ -569,22 +511,20 @@
           <td>
             <h3>Computer Security Guild</h3>
           </td>
-
           <td>
-            <p>(PHINMA-University Of Pangasinan)</p>
+            <p>PHINMA-University Of Pangasinan</p>
           </td>
         </tr>
       </table>
 
       <ul>
         <li>
-          <span>
-            Elected as the President of the Computer Security Guild, leading
+          <span
+            >Elected as the President of the Computer Security Guild, leading
             initiatives to promote cyberse curity awareness and education among
-            students.
-          </span>
-
-          <span>(July 2025)</span>
+            students.</span
+          >
+          <span>July 2025</span>
         </li>
       </ul>
 
@@ -593,20 +533,19 @@
           <td>
             <h3>Cloud and DevOps Basic (DICT)</h3>
           </td>
-
           <td>
-            <p>(Philippines)</p>
+            <p>Philippines</p>
           </td>
         </tr>
       </table>
 
       <ul>
         <li>
-          <span>
-            Completed the DICT training in cloud computing and DevOps concepts.
-          </span>
-
-          <span>(Nov 2025)</span>
+          <span
+            >Completed the DICT training in cloud computing and DevOps
+            concepts.</span
+          >
+          <span>Nov 2025</span>
         </li>
       </ul>
 
@@ -615,9 +554,8 @@
           <td>
             <h3>ScholarZone Design Thinking Workshop</h3>
           </td>
-
           <td>
-            <p>(Philippines)</p>
+            <p>Philippines</p>
           </td>
         </tr>
       </table>
@@ -627,10 +565,9 @@
           <span>
             Provided valuable insights into the application of design thinking
             principles to enhance research forum processes, fostering
-            innovation, collaboration and impactful results.
-          </span>
-
-          <span>(Jan 2025)</span>
+            innovation, collaboration and impactful results.</span
+          >
+          <span>Jan 2025</span>
         </li>
       </ul>
     </section>
